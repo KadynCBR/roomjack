@@ -65,5 +65,6 @@ class RoomSpider(CrawlSpider):
                 'name' : listing_name,
                 'price': listing_price,
                 'date' : listing_date,
-                'link' : listing_detail_link
+                'link' : listing_detail_link,
+                'src'  : response.url
             }
