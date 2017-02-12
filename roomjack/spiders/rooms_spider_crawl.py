@@ -55,10 +55,10 @@ class RoomSpider(CrawlSpider):
             listing_price = room.xpath(
             'p/span[2]/span[1]'
             ).extract()
-            listing_date = room.xpath('//p/time/@datetime').extract_first()
+            listing_date = room.xpath('p/time/@datetime').extract_first()
             # This appends the start url
             listing_detail_link = self.allowed_domains[0] +\
-                                  room.xpath('//p/a/@href').extract_first()
+                                  room.xpath('p/a/@href').extract_first()
             # At this point you've gotten every room. You can do what you want
             # with the data, or yield it so you can easily output it to json.
             yield {
